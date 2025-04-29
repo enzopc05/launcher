@@ -1,0 +1,4 @@
+2025-04-29 14:56:03,571 - launcher - INFO - Logger initialisé
+2025-04-29 14:56:03,792 - launcher - INFO - Chargement des jeux depuis C:\Users\User\OneDrive\Bureau\jeu
+2025-04-29 14:56:03,796 - launcher - ERROR - Exception non gérée: %s
+NoneType: None
