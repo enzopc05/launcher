@@ -6,9 +6,9 @@ import threading
 import time
 
 class GameLauncherUI:
-    def __init__(self, root, scanner, game_manager):
+    def __init__(self, root, scanner_func, game_manager):
         self.root = root
-        self.scanner = scanner
+        self.scanner_func = scanner_func  # Renommé pour clarifier qu'il s'agit d'une fonction
         self.game_manager = game_manager
         self.games = []
         self.game_frames = {}
@@ -75,7 +75,8 @@ class GameLauncherUI:
         """Charge les jeux depuis le répertoire spécifié."""
         self.current_directory = directory
         self.dir_var.set(f"Répertoire: {directory}")
-        self.games = self.scanner.scan_games_directory(directory)
+        # Correction ici: utiliser directement la fonction scanner
+        self.games = self.scanner_func(directory)
         self.display_games()
     
     def refresh_games(self):

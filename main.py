@@ -1,7 +1,7 @@
 import tkinter as tk
 import os
 import sys
-import scanner
+from scanner import scan_games_directory  # Importation correcte de la fonction
 from interface import GameLauncherUI
 from game_manager import GameManager
 from logger import logger
@@ -32,7 +32,7 @@ def main():
         root.iconbitmap("assets/icon.ico")
     
     # Initialiser l'interface utilisateur
-    app = GameLauncherUI(root, scanner.scan_games_directory, game_manager)
+    app = GameLauncherUI(root, scan_games_directory, game_manager)  # Utilisation correcte de la fonction
     
     # Définir le répertoire de jeux par défaut
     jeux_path = r"C:\Users\User\OneDrive\Bureau\jeu"
